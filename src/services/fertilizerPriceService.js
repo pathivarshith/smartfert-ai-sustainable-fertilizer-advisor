@@ -3,7 +3,7 @@
 // Implements validation, local storage caching, status classification, and user local price overrides.
 
 const CACHE_KEY = 'smartfert_govt_prices_v1';
-const BACKEND_API_URL = 'http://localhost:5001/api/fertilizer-prices';
+const BACKEND_API_URL = import.meta.env.VITE_API_URL || '/api/fertilizer-prices';
 
 export const OFFICIAL_GOVT_PRICE_DATASET = {
   urea: {
